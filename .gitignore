@@ -1,0 +1,6 @@
+# Ignorar arquivos .DS_Store
+.DS_Store
+
+# Ignorar arquivos .DS_Store em pastas específicas
+**/.DS_Store
+
