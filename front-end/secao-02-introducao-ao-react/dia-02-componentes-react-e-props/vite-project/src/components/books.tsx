@@ -1,5 +1,5 @@
 type BookProps = {
-  book: {
+  currentBook: {
     title: string,
     pages: number,
     isRead: boolean,
@@ -7,12 +7,16 @@ type BookProps = {
   }
 };
 
-function Book({ book }: BookProps) {
+function Book({ currentBook }: BookProps) {
   return (
     <li>
+      <span>{currentBook.isRead ? '✅' : '⏳'}</span>
+      {' '}
       <span>
-        {`${book.title} (${book.pages} páginas)`}
+        {`${currentBook.title} (${currentBook.pages} páginas)`}
       </span>
+      {' '}
+      {currentBook.isFavorite && <span>🤩</span>}
     </li>
   );
 }
